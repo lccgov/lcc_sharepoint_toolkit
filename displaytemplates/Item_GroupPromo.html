@@ -50,31 +50,104 @@ var dataDisplayTemplateTitle = "Accordion";
 
  _#-->
 
-		<li class="_#= PromoCSS =#_">
-			<a href="_#= PromoLink =#_">
-			
 			<!--#_
-			if(!pictureURL.isEmpty)  {   
+			if(PromoCSS == "external")  {   
 			_#-->
 			
-				<img src="_#= pictureURL =#_">
-			
+				<li class="_#= PromoCSS =#_">
+			        <a rel="external" href="_#= PromoLink =#_">
+					<!--#_
+                    if(!pictureURL.isEmpty)  {   
+                    _#-->
+                    
+                        <img src="_#= pictureURL =#_">
+                    
+                    <!--#_
+                    } 
+                    _#-->
+
+                    <h3>_#= Title =#_</h3>
+				
+					<!--#_
+                    if(!PromoDesc1.isEmpty)  {   
+                    _#-->
+                    
+                        <p>_#= PromoDesc1 =#_</p>
+
+                    <!--#_
+                    } 
+                    _#-->
+
+                    <span class="sr-only">External link</span>	
+                    
+                    </a>
+                </li>
+				
 			<!--#_
-			} 
-			_#-->
-				<h3>_#= Title =#_</h3>
-			<!--#_
-			if(!PromoDesc1.isEmpty)  {   
+			}else if(PromoCSS == "pdf"){
 			_#-->
 			
-				<p>_#= PromoDesc1 =#_</p>
+				<li class="_#= PromoCSS =#_">
+			        <a rel="PDF" href="_#= PromoLink =#_">
+					<!--#_
+                    if(!pictureURL.isEmpty)  {   
+                    _#-->
+                    
+                        <img src="_#= pictureURL =#_">
+                    
+                    <!--#_
+                    } 
+                    _#-->
+
+                    <h3>_#= Title =#_</h3>
+				
+					<!--#_
+                    if(!PromoDesc1.isEmpty)  {   
+                    _#-->
+                    
+                        <p>_#= PromoDesc1 =#_</p>
+
+                    <!--#_
+                    } 
+                    _#-->		
+                    
+                    </a>
+                </li>
 
 			<!--#_
-			} 
-			_#-->		
+			}else{
+			_#-->
 			
-			</a>
-		</li>
- 	</div>      
+				<li class="_#= PromoCSS =#_">
+			        <a href="_#= PromoLink =#_">
+					<!--#_
+                    if(!pictureURL.isEmpty)  {   
+                    _#-->
+                    
+                        <img src="_#= pictureURL =#_">
+                    
+                    <!--#_
+                    } 
+                    _#-->
+
+                    <h3>_#= Title =#_</h3>
+				
+					<!--#_
+                    if(!PromoDesc1.isEmpty)  {   
+                    _#-->
+                    
+                        <p>_#= PromoDesc1 =#_</p>
+
+                    <!--#_
+                    } 
+                    _#-->		
+                    
+                    </a>
+                </li>
+
+			<!--#_
+			}
+			_#-->
+ 	</div>       
 </body>
 </html>
