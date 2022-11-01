@@ -8,7 +8,7 @@
   "author": "Leeds City Council eServices",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-jasmine": "^2.4.0",
     "gulp-jshint": "^2.0.1",
     "jshint": "^2.9.5"
